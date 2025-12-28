@@ -35,13 +35,12 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/bin
-    install -m755 tomu $out/bin/.tomu-wrapped
-        cat << EOF > $out/bin/tomu
-    #! $SHELL
-    export AUDIODEV=pulse
-    exec $out/bin/.tomu-wrapped "\$@"
-    EOF
-      chmod +x $out/bin/tomu
+    install -m755 tomu $out/bin/tomu
+
+    wrapProgram $out/bin/tomu \
+      --set AUDIODEV pulse
+
+    runHook postInstall
   '';
 
   meta = {
