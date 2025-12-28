@@ -2,12 +2,11 @@
 A Nix flake for **Tomu**, a simple music player.
 Original upstream source: [6z7y/tomu](https://github.com/6z7y/tomu)
 
-
 > [!IMPORTANT]
-> You should have Nix Experimental Features (nix flakes and nix command) enabled.
-> here is nixos wiki page to know how to enable them: https://nixos.wiki/wiki/flakes.
+> You must have Nix Experimental Features (`flakes` and `nix-command`) enabled.
+> See the [NixOS Wiki](https://nixos.wiki/wiki/flakes) for instructions on how to enable them.
 
-##  Quick Start
+## Quick Start
 
 Run it instantly without installing:
 
@@ -23,12 +22,12 @@ nix shell github:shtts/tomu-nix
 
 ---
 
-##  Installation
+## Installation
 
 ### Step 1: Add to `flake.nix`
 
-1. Add the repo to your `inputs`.
-2. Pass `inputs` to your config using `specialArgs` (for NixOS) or `extraSpecialArgs` (for Home Manager).
+1. Add the repository to your `inputs`.
+2. Pass `inputs` to your configuration using `specialArgs` (for NixOS) or `extraSpecialArgs` (for Home Manager).
 
 ```nix
 {
@@ -64,11 +63,10 @@ nix shell github:shtts/tomu-nix
 
 ### Step 2: Add to Package List
 
-
-####  NixOS (`configuration.nix`)
+#### NixOS (`configuration.nix`)
 
 ```nix
-{ pkgs, inputs, ... }: # <-- Ensure 'inputs' is  here
+{ pkgs, inputs, ... }: # <-- Ensure 'inputs' is included here
 
 {
   environment.systemPackages = [
@@ -81,10 +79,10 @@ nix shell github:shtts/tomu-nix
 }
 ```
 
-####  Home Manager (`home.nix`)
+#### Home Manager (`home.nix`)
 
 ```nix
-{ pkgs, inputs, ... }: # <-- Ensure 'inputs' is here
+{ pkgs, inputs, ... }: # <-- Ensure 'inputs' is included here
 
 {
   home.packages = [
