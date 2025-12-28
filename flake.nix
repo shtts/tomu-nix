@@ -24,9 +24,6 @@
 
     in
     {
-      homeModules.default = ./modules/home/tomu.nix;
-      nixosModules.default = ./modules/nixos/tomu.nix;
-
       inherit packages;
     };
 }
