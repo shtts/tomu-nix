@@ -3,7 +3,7 @@ A Nix flake for **Tomu**, a simple music player.
 Original upstream source: [6z7y/tomu](https://github.com/6z7y/tomu)
 
 > [!IMPORTANT]
-> You must have Nix Experimental Features (`flakes` and `nix-command`) enabled.
+> You must have Nix Experimental Features (`flakes` and `nix command`) enabled.
 > See the [NixOS Wiki](https://nixos.wiki/wiki/flakes) for instructions on how to enable them.
 
 ## Quick Start
