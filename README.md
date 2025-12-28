@@ -12,7 +12,7 @@ Original upstream source: [6z7y/tomu](https://github.com/6z7y/tomu)
 Run it instantly without installing:
 
 ```bash
-nix run github:shtts/tomu-nix musicfile.mp3
+nix run github:shtts/tomu-nix 'musicfile.mp3'
 ```
 
 Or enter a shell with `tomu` available:
